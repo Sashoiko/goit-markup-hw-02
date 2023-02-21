@@ -1,13 +1,18 @@
 body {
         font-family: 'Roboto', sans-serif;
+        font-size: 16px;
         color: #2E2F42;
         background-color: #FFFFFF;
 }
 
 :root {
         --text-color: #434455;
-        --hover-color-link: #4D5AE5;
-        --hover-color-mail-tel: #404BBF;
+        --hover-color-mail-tel-btn: #404BBF;
+        --color-body: #2E2F42;
+        --color-border-btn-footlogo: #E7E9FC;
+        --color-hero-and-background: #FFFFFF;
+        --color-background-team-btn: #F4F4FD;
+        --color-link-and-btn: #4D5AE5;
 
 }
 
@@ -20,12 +25,11 @@ body {
 }
 
 .open{
-        color: #4D5AE5;
+        color: var(--color-link-and-btn);
 }
 
 .navigation {
         font-weight: 500;
-        font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
 }
@@ -35,7 +39,6 @@ body {
         font-weight: 800;
         font-size: 18px;
         line-height: 1.33;
-        display: flex;
         align-items: center;
         letter-spacing: 0.03em;
         text-transform: uppercase;
@@ -49,7 +52,6 @@ body {
 }
 
 .text {
-        font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
 }
@@ -64,9 +66,9 @@ body {
         align-items: center;
         text-align: center;
         letter-spacing: 0.04em;
-        color: #4D5AE5;
-        background: #F4F4FD;
-        border: 1px solid #E7E9FC;
+        color: var(--color-link-and-btn);
+        background: var(--color-background-team-btn);
+        border: 1px solid, var(--color-border-btn-footlogo);
         border-radius: 4px;
         cursor: pointer;
 }
@@ -92,11 +94,11 @@ body {
 .header-navigation {}
 
 .header-logo {
-        color: #2E2F42;
+        color: var(--color-body);
 }
 
 .header-logo span {
-        color: #4D5AE5;
+        color: var(--color-link-and-btn);
 }
 
 .header-list {}
@@ -105,12 +107,12 @@ body {
 .header-item {}
 
 .header-link {
-        color: #2E2F42;
+        color: var(--color-body);
 }
 
 .header-link:hover,
 .header-link:focus {
-        color: var(--hover-color-link)
+        color: var(--color-link-and-btn)
 }
 
 .header-address {
@@ -124,8 +126,6 @@ body {
 .header-address-item {}
 
 .header-address-mail {
-        font-weight: 400;
-        font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: var(--text-color);
@@ -133,12 +133,10 @@ body {
 
 .header-address-mail:hover,
 .header-address-mail:focus {
-        color: var(--hover-color-mail-tel);
+        color: var(--hover-color-mail-tel-btn);
 }
 
 .header-address-tel {
-        font-weight: 400;
-        font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: var(--text-color);
@@ -146,7 +144,7 @@ body {
 
 .header-address-tel:hover,
 .header-address-tel:focus {
-        color: var(--hover-color-mail-tel);
+        color: var(--hover-color-mail-tel-btn);
 }
 
 
@@ -157,7 +155,7 @@ body {
 
 .hero {
 
-        background: #2E2F42;
+        background-color: var(--color-body);
 }
 
 .hero-title {
@@ -165,13 +163,13 @@ body {
         line-height: 1.07;
         text-align: center;
         letter-spacing: 0.02em;
-        color: #FFFFFF;
+        color: var(--color-hero-and-background);
 }
 
 .hero-btn {
         letter-spacing: 0.04em;
-        color: #FFFFFF;
-        background: #4D5AE5;
+        color: var(--color-hero-and-background);
+        background: var(--color-link-and-btn);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         cursor: pointer;
@@ -179,7 +177,7 @@ body {
 
 .hero-btn:hover,
 .hero-btn:focus {
-        background: #404BBF;
+        background: var(--hover-color-mail-tel-btn);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
 }
@@ -228,7 +226,7 @@ body {
 /* Команда */
 
 .team {
-        background: #F4F4FD;
+        background: var(--color-background-team-btn);
 }
 
 .team-title {
@@ -241,7 +239,11 @@ body {
 
 .team-list {}
 
-.team-item {}
+.team-item {
+        background: var(--color-hero-and-background);
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        border-radius: 0px 0px 4px 4px;
+}
 
 .team-heading {
         font-weight: 500;
@@ -275,8 +277,8 @@ body {
 
 .button-item-btn:hover,
 .button-item-btn:focus {
-        color: #FFFFFF;
-        background: #404BBF;
+        color: var(--color-hero-and-background);
+        background: var(--hover-color-mail-tel-btn);
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
                 0px 2px 1px rgba(0, 0, 0, 0.08),
                 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -303,23 +305,21 @@ body {
 
 
 .footer {
-        background: #2E2F42;
+        background: var(--color-body);
 }
 
 .footer-logo {
-        color: #F4F4FD;
+        color: var(--color-background-team-btn);
 }
 
 .footer-logo span {
-        color: #4D5AE5;
-
+        color: var(--color-link-and-btn);
 }
 
 .footer-text {
-        font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        color: #E7E9FC;
+        color: var(--color-border-btn-footlogo);
 }
 
 /* /Футер */
